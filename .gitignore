@@ -1,0 +1,17 @@
+# Generated benchmark workspaces
+.work/
+.tmp/
+
+# Go
+*.test
+coverage.out
+
+# Logs
+*.log
+
+# Editor and OS files
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
