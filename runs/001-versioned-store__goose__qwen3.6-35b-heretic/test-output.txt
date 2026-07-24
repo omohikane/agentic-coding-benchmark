@@ -1,0 +1,34 @@
+=== RUN   TestNewStoreIsEmpty
+--- PASS: TestNewStoreIsEmpty (0.00s)
+=== RUN   TestSetAndGet
+--- PASS: TestSetAndGet (0.00s)
+=== RUN   TestSetOverwritesExistingValue
+--- PASS: TestSetOverwritesExistingValue (0.00s)
+=== RUN   TestEmptyKeyAndEmptyValueAreValid
+--- PASS: TestEmptyKeyAndEmptyValueAreValid (0.00s)
+=== RUN   TestDeleteExistingKey
+--- PASS: TestDeleteExistingKey (0.00s)
+=== RUN   TestDeleteMissingKey
+--- PASS: TestDeleteMissingKey (0.00s)
+=== RUN   TestSnapshotIDsIncrease
+--- PASS: TestSnapshotIDsIncrease (0.00s)
+=== RUN   TestRestoreSnapshot
+--- PASS: TestRestoreSnapshot (0.00s)
+=== RUN   TestRestoreRemovesKeysCreatedAfterSnapshot
+--- PASS: TestRestoreRemovesKeysCreatedAfterSnapshot (0.00s)
+=== RUN   TestRestoreRecoversDeletedKeys
+--- PASS: TestRestoreRecoversDeletedKeys (0.00s)
+=== RUN   TestSnapshotsAreIndependent
+--- PASS: TestSnapshotsAreIndependent (0.00s)
+=== RUN   TestRestoringSnapshotDoesNotMutateSnapshot
+--- PASS: TestRestoringSnapshotDoesNotMutateSnapshot (0.00s)
+=== RUN   TestSnapshotAfterRestoreCapturesRestoredState
+--- PASS: TestSnapshotAfterRestoreCapturesRestoredState (0.00s)
+=== RUN   TestRestoreUnknownSnapshotDoesNothing
+--- PASS: TestRestoreUnknownSnapshotDoesNothing (0.00s)
+=== RUN   TestRestoreInvalidSnapshotIDs
+--- PASS: TestRestoreInvalidSnapshotIDs (0.00s)
+=== RUN   TestComplexStateTransitions
+--- PASS: TestComplexStateTransitions (0.00s)
+PASS
+ok  	github.com/omohikane/agentic-coding-benchmark/benchmarks/001-versioned-store	0.002s
