@@ -419,6 +419,11 @@ The report should be reproducible from the benchmark artifacts.
 
 Treat `run-report.md` as an execution log, not as a narrative summary.
 
+Prefer omitting information over guessing.
+
+A missing fact is acceptable.
+An invented fact is not.
+
 ---
 
 # Completion Criteria
