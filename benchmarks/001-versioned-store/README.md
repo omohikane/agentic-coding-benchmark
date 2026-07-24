@@ -6,6 +6,10 @@ The benchmark consists of a specification, one or more tests, and a project skel
 
 This benchmark evaluates implementation ability only. Scoring is performed separately by a dedicated Judge Agent.
 
+When in doubt, prefer reporting uncertainty over making assumptions.
+
+The benchmark values factual execution more than optimistic reporting.
+
 ---
 
 # Objective
@@ -294,7 +298,29 @@ Create `run-report.md` using the following structure.
 - Final Test Command:
 - Final Test Status:
 - Implementation Attempts:
+  Record the actual number of implementation iterations.
+  If this was not tracked during execution,
+  write:
+  Not Recorded
 - Test Executions:
+
+## Commands Executed
+
+List every command that was executed during the benchmark.
+
+Example:
+
+1. ls
+
+2. cat README.md
+
+3. cat SPEC.md
+
+4. go test -v ./...
+
+5. gofmt -w .
+
+6. go test -v ./...
 
 ## Files Changed
 
@@ -332,6 +358,27 @@ test-output.txt
 - Unexpected files created: Yes / No
 - Accessed parent directories: Yes / No
 
+## Self Verification
+
+Before completing the benchmark, verify each item below.
+
+| Item                                                       | Status   |
+| ---------------------------------------------------------- | -------- |
+| Read and understood `SPEC.md`                              | Yes / No |
+| Implemented the required functionality                     | Yes / No |
+| Executed the final test suite                              | Yes / No |
+| Saved the final test output to `test-output.txt`           | Yes / No |
+| Generated `run-report.md`                                  | Yes / No |
+| Modified any protected files                               | Yes / No |
+| Accessed parent directories or other benchmark directories | Yes / No |
+| Created unnecessary files                                  | Yes / No |
+
+Do not guess.
+
+If you cannot verify an item from actual execution, mark it as **Unknown** and explain why in the **Notes** section.
+
+This checklist is a factual verification of the completed work, not a summary or an estimate.
+
 ## Notes
 
 Record any assumptions, uncertainties, or remaining concerns.
@@ -339,20 +386,38 @@ Record any assumptions, uncertainties, or remaining concerns.
 
 ---
 
-# Reporting Rules
+## Reporting Rules
 
-The run report must contain only information that was actually observed.
+The run report is a factual execution log.
 
-Do not invent or estimate:
+Everything written in the report must be based on actions that were actually performed.
 
-- execution results
-- execution times
+Never estimate or infer information that was not explicitly recorded during execution.
+
+If a value is unknown, write:
+
+- Not Recorded
+
+instead of guessing.
+
+Examples include:
+
+- execution time
+- implementation attempts
+- number of test executions
+- command history
 - token usage
-- benchmark scores
-- file modifications
-- successful test outcomes
+- benchmark score
 
-If a value is unknown, explicitly state that it was not measured.
+Accuracy is more important than completeness.
+
+When generating `run-report.md`, do not summarize from memory.
+
+Instead, use the files generated during execution and the commands that were actually executed.
+
+The report should be reproducible from the benchmark artifacts.
+
+Treat `run-report.md` as an execution log, not as a narrative summary.
 
 ---
 
